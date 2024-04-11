@@ -112,7 +112,7 @@ This repository provides the implementation of common **Motion Planning** algori
     ./killpro.sh
     ```
 
-## 1. <span id="1">Document
+## <span id="1">1. Document
 
 The overall file structure is shown below.
 
@@ -145,7 +145,7 @@ ros_motion_planner
     └── user_config         # user configure file
 ```
 
-## <span id="3">2. Version
+## <span id="2">2. Version
 
 ### Global Planner
 
@@ -155,6 +155,6 @@ ros_motion_planner
 |     **A\***      |      [![Status](https://img.shields.io/badge/done-v1.1-brightgreen)](https://github.com/ai-winter/ros_motion_planning/blob/master/src/core/global_planner/graph_planner/src/a_star.cpp)       |          ![a_star_ros.gif](assets/a_star_ros.gif)          |[A Formal Basis for the heuristic Determination of Minimum Cost Paths](https://ieeexplore.ieee.org/document/4082128)
 |     **RRT**      |       [![Status](https://img.shields.io/badge/done-v1.1-brightgreen)](https://github.com/ai-winter/ros_motion_planning/blob/master/src/core/global_planner/sample_planner/src/rrt.cpp)        |             ![rrt_ros.gif](assets/rrt_ros.gif)             |[Rapidly-Exploring Random Trees: A New Tool for Path Planning](http://msl.cs.uiuc.edu/~lavalle/papers/Lav98c.pdf)
 
-## <span id="5">05. License
+## <span id="3">3. License
 
 The source code is released under [GPLv3](https://www.gnu.org/licenses/) license.
