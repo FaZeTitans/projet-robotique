@@ -20,7 +20,8 @@ This repository provides the implementation of common **Motion Planning** algori
 
 **This fork add a custom world and launch file for the 302's 3IL room**
 
-![demo.gif](./assets/demo.gif)
+![302_gazebo.png](./assets/302_gazebo.png)
+![302_rviz.png](./assets/302_rviz.png)
 
 ## Contents
 - [Quick Start within 3 Minutes](#0)
