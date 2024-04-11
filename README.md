@@ -25,11 +25,8 @@ This repository provides the implementation of common **Motion Planning** algori
 ## Contents
 - [Quick Start within 3 Minutes](#0)
 - [Document](#1)
-- [Tool Chains](#2)
-- [Version](#3)
-- [Acknowledgments](#4)
-- [License](#5)
-- [Maintenance](#6)
+- [Version](#2)
+- [License](#3)
 
 ## <span id="0">0. Quick Start within 3 Minutes
 
@@ -113,7 +110,9 @@ The overall file structure is shown below.
 ```
 ros_motion_planner
 ├── assets
+├── launch                  # launch file for the custom world (302)
 ├── scripts
+├── worlds                  # worlds to import (302)
 └── src
     ├── core
     │   ├── global_planner
@@ -137,37 +136,7 @@ ros_motion_planner
     └── user_config         # user configure file
 ```
 
-To better understand the project code, detailed interface documentation can be generated using the doxygen tool. First install doxygen and graphviz.
-
-```bash
-sudo apt-get install doxygen graphviz
-```
-
-Then start the doxygen and you can find the documentation in `./docs/html/index.html`. 
-
-```bash
-doxygen
-```
-
-For more information about the project usage, please refer to the following table.
-
-| Index | Document | Introduction |
-|:----:|:----:|:----:|
-|0|[![Status](https://img.shields.io/badge/config-grey?logo=ROS)](https://github.com/ai-winter/ros_motion_planning/blob/master/docs/configuration.md)|Introduce how to dynamically configure parameters such as robot types, planning algorithms, environmental obstacles, etc.
-|1|[![Status](https://img.shields.io/badge/docker-grey?logo=ROS)](https://github.com/ai-winter/ros_motion_planning/blob/master/docs/docker.md)|Introduce how to use Docker to conveniently build the project environment and simulate it.
-|2|[![Status](https://img.shields.io/badge/real-grey?logo=ROS)](https://github.com/ai-winter/ros_motion_planning/blob/master/docs/realworld.md)|Introduce how to build a real robot application based on the algorithms provided in this repository.
-|3|[![Status](https://img.shields.io/badge/history-grey?logo=ROS)](https://github.com/ai-winter/ros_motion_planning/blob/master/docs/history.md)|Important updates.
-
-## 02. <span id="2">Tool Chains
-
-For the efficient operation of the motion planning system, we provide a series of user-friendly simulation tools that allow for on-demand selection of these lightweight repositories.
-
-| Tool Version | Introduction |
-|:-------:|:---------:|
-|[![Status](https://img.shields.io/badge/Pedestrian-v2.0-8A2BE2?logo=iledefrancemobilites)](https://github.com/ai-winter/ros_pedestrians_simulation) | This is a Gazebo plugin for pedestians with collision property. You can construct a dynamic environment in ROS easily using plugin.
-|[![Status](https://img.shields.io/badge/RMPV-v2.0-8A2BE2?logo=v)](https://github.com/ai-winter/path_visualization_plugins)|This repository provides a ROS-based visualization Rviz plugins for path planning and curve generation algorithms.
-
-## <span id="3">03. Version
+## <span id="3">2. Version
 
 ### Global Planner
 
@@ -219,20 +188,6 @@ For the efficient operation of the motion planning system, we provide a series o
 | **Dubins** | [![Status](https://img.shields.io/badge/done-v1.0-brightgreen)](https://github.com/ai-winter/ros_motion_planning/blob/master/src/core/curve_generation/src/dubins_curve.cpp) | ![dubins_curve_python.png](assets/dubins_curve_python.png)|[On curves of minimal length with a constraint on average curvature, and with prescribed initial and terminal positions and tangents]()
 | **Reeds-Shepp** | [![Status](https://img.shields.io/badge/done-v1.0-brightgreen)](https://github.com/ai-winter/ros_motion_planning/blob/master/src/core/curve_generation/src/reeds_shepp.cpp) | ![reeds_shepp_python.png](assets/reeds_shepp_python.gif)|[Optimal paths for a car that goes both forwards and backwards](https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-145/issue-2/Optimal-paths-for-a-car-that-goes-both-forwards-and/pjm/1102645450.full)
 
-
-## <span id="4">04. Acknowledgments
-* Our robot and world models are from [
-Dataset-of-Gazebo-Worlds-Models-and-Maps](https://github.com/mlherd/Dataset-of-Gazebo-Worlds-Models-and-Maps) and [
-aws-robomaker-small-warehouse-world](https://github.com/aws-robotics/aws-robomaker-small-warehouse-world). Thanks for these open source models sincerely.
-
-* Pedestrians in this environment are using social force model(sfm), which comes from [https://github.com/robotics-upo/lightsfm](https://github.com/robotics-upo/lightsfm).
-
-* A ROS costmap plugin for [dynamicvoronoi](http://www2.informatik.uni-freiburg.de/~lau/dynamicvoronoi/) presented by Boris Lau.
-
 ## <span id="5">05. License
 
 The source code is released under [GPLv3](https://www.gnu.org/licenses/) license.
-
-## <span id="6">06. Maintenance
-
-Feel free to contact us if you have any question.
